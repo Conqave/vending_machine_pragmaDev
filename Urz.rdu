@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE PrototypingGui SYSTEM "rtdsPrototypingGui.dtd">
+
+<PrototypingGui>
+<Gui width="660" height="660" backgroundColor="#DDDDDD" backgroundImage="..\..\..\..\Downloads\277848656_428204859112795_3180746002484243788_n.png">
+<Widget id="1" name="getCocaColaButton" type="BUTTON" x="343" y="210" width="177" height="50" text="Coca Cola" textColor="#000000" color="#ff0000">
+<OutputAction messageName="getCocaColaSignal" data=""></OutputAction>
+</Widget>
+<Widget id="3" name="getCocaColaZeroButton" type="BUTTON" x="340" y="290" width="180" height="50" text="Coca Cola Zero" textColor="#000000" color="#ff0000">
+<OutputAction messageName="getCocaColaZeroSignal" data=""></OutputAction>
+</Widget>
+<Widget id="4" name="getFantaButton" type="BUTTON" x="340" y="360" width="180" height="50" text="Fanta" textColor="#000000" color="#ffaa00">
+<OutputAction messageName="getFantaSignal" data=""></OutputAction>
+</Widget>
+<Widget id="5" name="getSpriteButton" type="BUTTON" x="340" y="440" width="180" height="50" text="Sprite" textColor="#000000" color="#00aa00">
+<OutputAction messageName="getSpriteSignal" data=""></OutputAction>
+</Widget>
+<Widget id="6" name="CocaColaLED" type="LED" x="520" y="220" width="30" height="30" text="N/A" textColor="#000000" color="#FF0000">
+</Widget>
+<Widget id="7" name="CocaColaZeroLED" type="LED" x="520" y="300" width="30" height="30" text="N/A" textColor="#000000" color="#FF0000">
+</Widget>
+<Widget id="8" name="FantaLED" type="LED" x="520" y="370" width="30" height="30" text="N/A" textColor="#000000" color="#FF0000">
+</Widget>
+<Widget id="9" name="SpriteLED" type="LED" x="520" y="450" width="30" height="30" text="N/A" textColor="#000000" color="#FF0000">
+</Widget>
+<Widget id="10" name="mainTextDisplay" type="TEXT_DISPLAY" x="370" y="20" width="260" height="90" text="Witaj!" textColor="#000000" color="#FFFFFF">
+</Widget>
+<Widget id="12" name="payButton" type="BUTTON" x="570" y="280" width="80" height="130" text="Tutaj zbliz karte!" textColor="#000000" color="#C4EFED">
+<OutputAction messageName="pay" data=""></OutputAction>
+</Widget>
+<Widget id="13" name="stopButton" type="BUTTON" x="580" y="570" width="70" height="60" text="STOP!" textColor="#000000" color="#ff00ff">
+<OutputAction messageName="stopS" data=""></OutputAction>
+</Widget>
+</Gui>
+<Trigger messageName="Y">
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Wybierz produkt"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="getCocaColaSignalY">
+<Case caseName="New case">
+<GuiAction widgetId="6" actionType="CHANGE_COLOR" value="green"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Wybrano Coca Cole"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="getCocaColaZeroSignalY">
+<Case caseName="New case">
+<GuiAction widgetId="7" actionType="CHANGE_COLOR" value="green"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Wybrano Coca Cole Zero"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="getFantaSignalY">
+<Case caseName="New case">
+<GuiAction widgetId="8" actionType="CHANGE_COLOR" value="green"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Wybrano Fante"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="getSpriteSignalY">
+<Case caseName="New case">
+<GuiAction widgetId="9" actionType="CHANGE_COLOR" value="New action"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Wybrano Fante"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="turn_off">
+<Case caseName="New case">
+<GuiAction widgetId="6" actionType="CHANGE_COLOR" value="red"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="7" actionType="CHANGE_COLOR" value="red"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="8" actionType="CHANGE_COLOR" value="red"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="9" actionType="CHANGE_COLOR" value="red"></GuiAction>
+</Case>
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Zbliz karte"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="payY">
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Zaplacono, wydaje produkt!"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="turnOffPayY">
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Nie Zaplacono"></GuiAction>
+</Case>
+</Trigger>
+<Trigger messageName="stopSY">
+<Case caseName="New case">
+<GuiAction widgetId="10" actionType="DISPLAY" value="Zatrzymano!"></GuiAction>
+</Case>
+</Trigger>
+</PrototypingGui>
